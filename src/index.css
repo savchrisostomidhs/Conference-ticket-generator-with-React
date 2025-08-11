@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+html,
+body,
+#root {
+  height: fit-content;
+  min-height: 100vh;
+  width: 100%;
+}
+
+body {
+  font-family: Inconsolata, sans-serif;
+  color: white;
+}
+
+.back {
+  background-image: url("/images/pattern-lines.svg"),
+    url("/images/pattern-circle.svg"),
+    url("/images/pattern-squiggly-line-top.svg"),
+    url("/images/pattern-squiggly-line-bottom-desktop.svg"),
+    url("/images/background-desktop.png");
+  background-size: 100% 100%, auto, auto, auto, 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center, 79% 64%, top right, bottom left, center;
+}
+
+.input {
+  @apply flex flex-col items-start gap-2 w-full;
+}
+
+.input input,
+.file {
+  @apply w-full p-2.5 rounded-lg outline-none bg-[hsla(245,19%,35%,0.2)] border-1 border-[hsl(245,15%,58%)] hover:bg-[hsla(245,19%,35%,0.6)];
+}
+
+.input input:focus-visible,
+.file:focus-visible {
+  outline: 2px solid hsl(245, 19%, 35%);
+  outline-offset: 2px;
+}
+
+.button {
+  @apply bg-[hsla(245,19%,35%,0.6)] rounded-sm px-1 text-[hsla(252,6%,83%,0.8)] cursor-pointer;
+}
+
+.submit {
+  @apply w-full !bg-[hsl(7,88%,67%)] !rounded-xl !p-2.5 !text-[hsl(248,70%,10%)] !font-[700] cursor-pointer border-b-4 border-[hsl(7,88%,67%)] hover:!bg-[hsl(7,71%,60%)];
+}
+
+/* .bg {
+  background-image: url("images/pattern-ticket.svg");
+  background-size: 100% 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+} */
+
+.grad {
+  background: linear-gradient(to right, hsl(7, 86%, 67%), hsl(0, 0%, 100%));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
